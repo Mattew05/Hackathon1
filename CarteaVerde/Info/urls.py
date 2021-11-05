@@ -16,8 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from Info.views import frontpage
+from . import views
 
 urlpatterns = [
-    path('', frontpage, name = 'frontpage'),
+    path('', views.frontpage, name = 'frontpage'),
+    path('descriere/', views.descriere, name = 'descriere'),
+    path('inceput/', views.inceput, name = 'inceput'),
+    path('teren', views.teren, name = 'teren'),
+    path('plante/', views.plante, name = 'plante'),
+    path('animale/', views.animale, name = 'animale'),
+    path('tech/', views.tech, name = 'tech'),
 ]
